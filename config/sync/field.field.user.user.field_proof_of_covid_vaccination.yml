@@ -1,0 +1,27 @@
+uuid: 0226e809-e7d0-4eb0-974e-32468e42e0d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_proof_of_covid_vaccination
+  module:
+    - file
+    - user
+id: user.user.field_proof_of_covid_vaccination
+field_name: field_proof_of_covid_vaccination
+entity_type: user
+bundle: user
+label: 'Proof of covid vaccination'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: txt
+  max_filesize: ''
+  description_field: false
+field_type: file

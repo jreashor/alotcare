@@ -1,0 +1,30 @@
+uuid: b982abd4-0dea-4f59-8184-4a7b6ca9b5b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_phone
+    - taxonomy.vocabulary.facility
+  module:
+    - required_api
+    - telephone
+    - telephone_validation
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 1
+  telephone_validation:
+    format: 0
+    country: {  }
+id: taxonomy_term.facility.field_phone
+field_name: field_phone
+entity_type: taxonomy_term
+bundle: facility
+label: Phone
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

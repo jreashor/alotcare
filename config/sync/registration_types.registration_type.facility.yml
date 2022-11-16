@@ -1,0 +1,16 @@
+uuid: 4a4416a8-a743-4390-b08c-fd9e78cb434f
+langcode: en
+status: true
+dependencies: {  }
+id: facility
+label: Facility
+enabled: true
+display: facility_registration
+custom_path: facility/register
+tab_title: ''
+roles:
+  facility: facility
+  administrator: '0'
+  staff: '0'
+page_title: 'Facility registration'
+description: ''

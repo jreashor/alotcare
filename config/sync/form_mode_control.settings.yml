@@ -1,0 +1,15 @@
+'use  The form mode default linked to  block_content entity( basic )': block_content.basic.default
+'use  The form mode default linked to  node entity( facility )': node.facility.default
+'use  The form mode default linked to  node entity( page )': node.page.default
+'use  The form mode default linked to  node entity( shift )': node.shift.default
+'use  The form mode default linked to  taxonomy_term entity( facility )': taxonomy_term.facility.default
+'use  The form mode facility_registration linked to  taxonomy_term entity( facility )': taxonomy_term.facility.facility_registration
+'use  The form mode default linked to  taxonomy_term entity( position )': taxonomy_term.position.default
+'use  The form mode default linked to  taxonomy_term entity( shift_type )': taxonomy_term.shift_type.default
+'use  The form mode default linked to  user entity( user )': user.user.default
+'use  The form mode facility_registration linked to  user entity( user )': user.user.facility_registration
+'use  The form mode staff_registration linked to  user entity( user )': user.user.staff_registration
+'use  The form mode staff_edit linked to  user entity( user )': user.user.staff_edit
+'use  The form mode default linked to  node entity( availability )': node.availability.default
+'use  The form mode default linked to  paragraph entity( preferred_facility )': paragraph.preferred_facility.default
+'use  The form mode facility_edit linked to  user entity( user )': user.user.facility_edit

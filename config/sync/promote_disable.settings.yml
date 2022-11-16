@@ -1,0 +1,8 @@
+promote_disable_node_types:
+  page: page
+  facility: facility
+  shift: shift
+promote_disable_sticky_node_types:
+  page: page
+  facility: facility
+  shift: shift

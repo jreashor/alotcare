@@ -1,0 +1,32 @@
+uuid: 4517f61a-952d-4d0b-927c-1d58dc5486d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_orientation_complete
+    - paragraphs.paragraphs_type.preferred_facility
+  module:
+    - field_config_cardinality
+    - required_api
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
+  field_config_cardinality:
+    cardinality_config: '1'
+id: paragraph.preferred_facility.field_orientation_complete
+field_name: field_orientation_complete
+entity_type: paragraph
+bundle: preferred_facility
+label: 'Orientation complete'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

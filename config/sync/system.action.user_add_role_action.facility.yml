@@ -1,0 +1,14 @@
+uuid: 0769a2a8-b8bd-4fec-9312-f25e7e297fa9
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.facility
+  module:
+    - user
+id: user_add_role_action.facility
+label: 'Add the Facility role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: facility

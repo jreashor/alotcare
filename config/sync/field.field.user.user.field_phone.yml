@@ -1,0 +1,30 @@
+uuid: 67118109-a9bb-430d-9489-cf9a763fcd16
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_phone
+  module:
+    - required_api
+    - telephone
+    - user
+third_party_settings:
+  required_api:
+    required_plugin: required_by_role
+    required_plugin_options:
+      anonymous: anonymous
+      staff: staff
+      facility: 0
+      administrator: 0
+id: user.user.field_phone
+field_name: field_phone
+entity_type: user
+bundle: user
+label: Phone
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

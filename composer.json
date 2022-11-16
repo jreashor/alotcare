@@ -1,0 +1,130 @@
+{
+    "name": "drupal/recommended-project",
+    "description": "Project template for Drupal 9 projects with a relocated document root",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://www.drupal.org/project/drupal",
+    "support": {
+        "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
+        "chat": "https://www.drupal.org/node/314178"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "require": {
+        "composer/installers": "^2.0",
+        "drupal/address": "^1.10",
+        "drupal/admin_toolbar": "^3.1",
+        "drupal/advagg": "^4.1",
+        "drupal/auto_entitylabel": "^3.0@beta",
+        "drupal/bootstrap": "3.x-dev",
+        "drupal/business_rules": "^2.0@beta",
+        "drupal/change_pwd_page": "^1.0",
+        "drupal/content_access": "^1.0@alpha",
+        "drupal/core-composer-scaffold": "^9.3",
+        "drupal/core-recommended": "^9.3",
+        "drupal/devel": "^4.1",
+        "drupal/disable_user_view": "^2.0",
+        "drupal/email_registration": "^1.1",
+        "drupal/entity_reference_revisions": "^1.9",
+        "drupal/field_config_cardinality": "^1.1",
+        "drupal/field_group": "^3.2",
+        "drupal/field_permissions": "^1.1",
+        "drupal/filefield_paths": "^1.0@beta",
+        "drupal/form_mode_control": "^2.0",
+        "drupal/formdazzle": "^2.1",
+        "drupal/fullcalendar": "^1.0@alpha",
+        "drupal/fullcalendar_view": "^5.1",
+        "drupal/hide_revision_field": "^2.2",
+        "drupal/inline_entity_form": "^1.0@RC",
+        "drupal/mail_login": "^2.6",
+        "drupal/maxlength": "^2.0@RC",
+        "drupal/module_filter": "^3.2",
+        "drupal/nodeaccess": "^1.1",
+        "drupal/owner_or_admin": "^1.1",
+        "drupal/paragraphs": "^1.13",
+        "drupal/paragraphs_features": "^1.16",
+        "drupal/password_policy": "^3.1",
+        "drupal/pathauto": "^1.9",
+        "drupal/promote_disable": "^2.0",
+        "drupal/rabbit_hole": "^1.0@beta",
+        "drupal/redirect_after_login": "^2.7",
+        "drupal/registration_types": "^1.0@beta",
+        "drupal/required_by_role": "^1.1",
+        "drupal/restui": "^1.20",
+        "drupal/select2": "^1.13",
+        "drupal/smart_date": "^3.5",
+        "drupal/taxonomy_machine_name": "^1.0@beta",
+        "drupal/telephone_formatter": "^1.1",
+        "drupal/telephone_validation": "^2.3",
+        "drupal/token": "^1.10",
+        "npm-asset/select2": "^4.0",
+        "oomphinc/composer-installers-extender": "^2.0"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/installers": true,
+            "drupal/core-composer-scaffold": true,
+            "drupal/core-project-message": true,
+            "oomphinc/composer-installers-extender": true
+        }
+    },
+    "extra": {
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "web/"
+            }
+        },
+        "installer-types": [
+            "bower-asset",
+            "npm-asset"
+        ],
+        "installer-paths": {
+            "web/core": [
+                "type:drupal-core"
+            ],
+            "web/libraries/{$name}": [
+                "type:drupal-library",
+                "type:bower-asset",
+                "type:npm-asset"
+            ],
+            "web/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "web/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "web/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "drush/Commands/contrib/{$name}": [
+                "type:drupal-drush"
+            ],
+            "web/modules/custom/{$name}": [
+                "type:drupal-custom-module"
+            ],
+            "web/profiles/custom/{$name}": [
+                "type:drupal-custom-profile"
+            ],
+            "web/themes/custom/{$name}": [
+                "type:drupal-custom-theme"
+            ]
+        }
+    },
+    "require-dev": {
+        "drush/drush": "^11.0"
+    }
+}

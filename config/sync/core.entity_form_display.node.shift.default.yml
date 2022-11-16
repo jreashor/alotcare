@@ -1,0 +1,71 @@
+uuid: 881dba7f-4b1d-454f-a643-81732276e993
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.shift.field_applicants
+    - field.field.node.shift.field_assigned_to
+    - field.field.node.shift.field_date
+    - field.field.node.shift.field_facility
+    - field.field.node.shift.field_shift_type
+    - node.type.shift
+  module:
+    - datetime
+id: node.shift.default
+targetEntityType: node
+bundle: shift
+mode: default
+content:
+  field_applicants:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_assigned_to:
+    type: entity_reference_autocomplete
+    weight: 6
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_date:
+    type: datetime_default
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_facility:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_shift_type:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 4
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  created: true
+  path: true
+  promote: true
+  revision_log: true
+  sticky: true
+  title: true
+  uid: true

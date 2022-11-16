@@ -1,0 +1,23 @@
+uuid: 9b010af4-afe6-445f-a271-6cb3be48809d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_hourly_wage
+    - taxonomy.vocabulary.position
+id: taxonomy_term.position.field_hourly_wage
+field_name: field_hourly_wage
+entity_type: taxonomy_term
+bundle: position
+label: 'Hourly wage'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

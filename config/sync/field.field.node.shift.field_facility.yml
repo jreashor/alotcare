@@ -1,0 +1,35 @@
+uuid: 7aa8800b-c4a7-4bfe-abdc-cffc9ca3efca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_facility
+    - node.type.shift
+    - taxonomy.vocabulary.facility
+  module:
+    - required_api
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
+id: node.shift.field_facility
+field_name: field_facility
+entity_type: node
+bundle: shift
+label: Facility
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      facility: facility
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

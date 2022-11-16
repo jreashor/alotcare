@@ -1,0 +1,60 @@
+polyfill:
+  version: 3
+  js:
+    https://cdn.polyfill.io/v3/polyfill.min.js: { type: external, minified: true }
+vue:
+  version: 3.2.31
+  js:
+    https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.31/vue.global.prod.min.js: { type: external, minified: true }
+  dependencies:
+    - alotcare/polyfill
+vuex:
+  version: 4.0.2
+  js:
+    https://cdnjs.cloudflare.com/ajax/libs/vuex/4.0.2/vuex.global.prod.js: { type: external, minified: true }
+  dependencies:
+    - alotcare/vue
+axios:
+  version: 0.26.1
+  js:
+    https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js: { type: external, minified: true }
+luxon:
+  version: 2.4.0
+  js:
+    https://cdnjs.cloudflare.com/ajax/libs/luxon/2.4.0/luxon.min.js: { type: external, minified: true }
+app:
+  version: 1.0
+  js:
+    app/dist/app.umd.min.js: { minified: true }
+  # css:
+  #   theme:
+  #     app/dist/app.css: { minified: true }
+  dependencies:
+    - alotcare/vue
+    - alotcare/vuex
+    - alotcare/axios
+evo_calendar:
+  css:
+    layout:
+      css/evo-calendar.css: {}
+      css/evo-calendar.midnight-blue.css: {}
+    theme:
+      css/evo-calendar.custom.css: {}
+  js:
+    js/evo-calendar.js: {}
+  dependencies:
+    - core/drupal
+    - core/drupal.ajax
+    - core/jquery
+    - alotcare/luxon
+    - alotcare/app
+calendar_shifts:
+  js:
+    js/calendar-shifts.behaviors.js: {}
+  dependencies:
+    - alotcare/evo_calendar
+calendar_availability:
+  js:
+    js/calendar-availability.behaviors.js: {}
+  dependencies:
+    - alotcare/evo_calendar

@@ -1,0 +1,26 @@
+uuid: 9202b972-24b6-4113-86f2-b6cd5ee55296
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.facility.field_address
+    - field.field.node.facility.field_facility_term
+    - field.field.node.facility.field_phone
+    - node.type.facility
+  module:
+    - user
+id: node.facility.teaser
+targetEntityType: node
+bundle: facility
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_address: true
+  field_facility_term: true
+  field_phone: true

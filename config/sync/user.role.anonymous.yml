@@ -1,0 +1,32 @@
+uuid: 5a4800ef-79dc-43d0-8f1d-466a410912f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.restricted_html
+    - node.type.facility
+    - taxonomy.vocabulary.facility
+  module:
+    - field_permissions
+    - filter
+    - node
+    - system
+    - taxonomy
+_core:
+  default_config_hash: 6WavjUYXIegP9AAg2zXGx54MWIVoomC3SZhNiqe-Dyk
+id: anonymous
+label: 'Anonymous user'
+weight: -10
+is_admin: false
+permissions:
+  - 'access content'
+  - 'create facility content'
+  - 'create field_address'
+  - 'create field_bio'
+  - 'create field_experience'
+  - 'create field_phone'
+  - 'create field_position'
+  - 'create field_sin'
+  - 'create terms in facility'
+  - 'create user_picture'
+  - 'use text format restricted_html'

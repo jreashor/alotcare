@@ -1,0 +1,49 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for AlotCare module.
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\user\Entity\User;
+
+/**
+ * Implements hook_theme().
+ */
+function alotcare_theme() {
+  return [
+    'evo_calendar' => [
+      'variables' => [
+        'data' => NULL,
+      ],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_mail().
+ */
+function alotcare_mail($key, &$message, $params) {
+  switch ($key) {
+    case 'message_user':
+      $message['from'] = \Drupal::config('system.site')->get('mail');
+      $message['subject'] = $params['subject'];
+      $message['body'][] = $params['message'];
+      break;
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_create().
+ */
+function alotcare_ENTITY_TYPE_create(EntityInterface $entity) {
+  // Add facility to shifts on create.
+  if ($entity->bundle() == 'shift') {
+    /** @var \Drupal\user\Entity\User $user */
+    $user = User::load(\Drupal::currentUser()->id());
+    if ($entity->access('create', $user) && $user->hasField('field_facility') && !$user->field_facility->isEmpty()) {
+      $entity->field_facility = $user->field_facility->getValue();
+    }
+  }
+}

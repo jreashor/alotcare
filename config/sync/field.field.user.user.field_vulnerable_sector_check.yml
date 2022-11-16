@@ -1,0 +1,53 @@
+uuid: 5dbdff55-de3f-4cec-a6a6-cf4efe758405
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_vulnerable_sector_check
+  module:
+    - field_config_cardinality
+    - file
+    - filefield_paths
+    - required_api
+    - user
+third_party_settings:
+  filefield_paths:
+    enabled: true
+    file_path:
+      value: '[date:custom:Y]-[date:custom:m]'
+      options:
+        slashes: false
+        pathauto: false
+        transliterate: false
+    file_name:
+      value: '[file:ffp-name-only-original].[file:ffp-extension-original]'
+      options:
+        slashes: false
+        pathauto: false
+        transliterate: false
+    redirect: false
+    retroactive_update: false
+    active_updating: false
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
+  field_config_cardinality:
+    cardinality_config: '1'
+id: user.user.field_vulnerable_sector_check
+field_name: field_vulnerable_sector_check
+entity_type: user
+bundle: user
+label: 'Vulnerable sector check'
+description: 'Can be obtained via online background check or your local RCMP detachment.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: txt
+  max_filesize: ''
+  description_field: false
+field_type: file

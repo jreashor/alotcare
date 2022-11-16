@@ -1,0 +1,23 @@
+uuid: 86f174ce-01b8-46ef-991e-b6f24946b7d5
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - user
+id: user.field_other_documents
+field_name: field_other_documents
+entity_type: user
+type: file
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: private
+module: file
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

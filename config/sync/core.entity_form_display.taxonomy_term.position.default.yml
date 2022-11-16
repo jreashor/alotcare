@@ -1,0 +1,37 @@
+uuid: 6ec57b52-b038-4740-a01e-ce68dfe19b96
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.position.field_hourly_wage
+    - taxonomy.vocabulary.position
+id: taxonomy_term.position.default
+targetEntityType: taxonomy_term
+bundle: position
+mode: default
+content:
+  field_hourly_wage:
+    type: number
+    weight: 1
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 2
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true

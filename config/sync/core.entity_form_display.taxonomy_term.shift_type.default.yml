@@ -1,0 +1,30 @@
+uuid: b06bd055-5aad-42a0-9ca2-c6d1bf571003
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.shift_type
+id: taxonomy_term.shift_type.default
+targetEntityType: taxonomy_term
+bundle: shift_type
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 1
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true
+  revision_log_message: true

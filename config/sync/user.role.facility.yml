@@ -1,0 +1,28 @@
+uuid: 821f9c4b-a659-418a-b7a5-ba2116a6ab40
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.shift
+  module:
+    - alotcare
+    - field_permissions
+    - node
+id: facility
+label: Facility
+weight: -7
+is_admin: null
+permissions:
+  - 'access user profiles'
+  - 'administer nodes'
+  - 'create shift content'
+  - 'edit any shift content'
+  - 'edit own shift content'
+  - 'message users'
+  - 'view field_address'
+  - 'view field_bio'
+  - 'view field_experience'
+  - 'view field_phone'
+  - 'view field_position'
+  - 'view field_sin'
+  - 'view user_picture'

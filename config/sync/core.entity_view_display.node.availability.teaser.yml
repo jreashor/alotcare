@@ -1,0 +1,24 @@
+uuid: 9d392c13-c395-4ec2-bc3d-15ed1ed97a43
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.availability.field_date
+    - field.field.node.availability.field_shift_type
+    - node.type.availability
+  module:
+    - user
+id: node.availability.teaser
+targetEntityType: node
+bundle: availability
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_date: true
+  field_shift_type: true

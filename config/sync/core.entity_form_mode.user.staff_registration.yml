@@ -1,0 +1,10 @@
+uuid: e900a13e-bf3e-4d7b-b3e1-7d31fdcc6657
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.staff_registration
+label: 'Staff registration'
+targetEntityType: user
+cache: true

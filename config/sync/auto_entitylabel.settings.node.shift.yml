@@ -1,0 +1,9 @@
+status: 1
+pattern: '[node:field_shift_type] @ [node:field_facility] - [node:field_date:date:html_date]'
+escape: false
+preserve_titles: false
+dependencies:
+  config:
+    - node.type.shift
+save: 1
+chunk: '50'

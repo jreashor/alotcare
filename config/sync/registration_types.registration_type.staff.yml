@@ -1,0 +1,16 @@
+uuid: 5bda7b0b-2cf9-42d6-bb17-779dc466ea35
+langcode: en
+status: true
+dependencies: {  }
+id: staff
+label: Staff
+enabled: true
+display: staff_registration
+custom_path: user/register
+tab_title: ''
+roles:
+  staff: staff
+  administrator: '0'
+  facility: '0'
+page_title: 'Staff registration'
+description: ''

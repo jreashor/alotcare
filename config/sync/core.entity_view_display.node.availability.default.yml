@@ -1,0 +1,39 @@
+uuid: 82c8324c-98b5-4251-997e-169927fe02d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.availability.field_date
+    - field.field.node.availability.field_shift_type
+    - node.type.availability
+  module:
+    - datetime
+    - user
+id: node.availability.default
+targetEntityType: node
+bundle: availability
+mode: default
+content:
+  field_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_shift_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

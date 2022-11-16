@@ -1,0 +1,32 @@
+uuid: ffc3ed4e-5e21-449b-89ce-0c1045db75d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.preferred_facility.field_facility
+    - field.field.paragraph.preferred_facility.field_orientation_complete
+    - paragraphs.paragraphs_type.preferred_facility
+id: paragraph.preferred_facility.default
+targetEntityType: paragraph
+bundle: preferred_facility
+mode: default
+content:
+  field_facility:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_orientation_complete:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

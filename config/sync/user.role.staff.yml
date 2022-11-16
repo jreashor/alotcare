@@ -1,0 +1,35 @@
+uuid: 0a372d64-834f-410c-8ea9-7b8230a416ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.availability
+  module:
+    - field_permissions
+    - form_mode_control
+    - node
+id: staff
+label: Staff
+weight: -8
+is_admin: null
+permissions:
+  - 'create availability content'
+  - 'edit own availability content'
+  - 'edit own field_address'
+  - 'edit own field_bio'
+  - 'edit own field_experience'
+  - 'edit own field_phone'
+  - 'edit own field_position'
+  - 'edit own field_sin'
+  - 'edit own user_picture'
+  - 'use  The form mode staff_edit linked to  user entity( user )'
+  - 'view own field_address'
+  - 'view own field_bio'
+  - 'view own field_experience'
+  - 'view own field_facility_1_orientated'
+  - 'view own field_facility_2_orientated'
+  - 'view own field_facility_3_orientated'
+  - 'view own field_phone'
+  - 'view own field_position'
+  - 'view own field_sin'
+  - 'view own user_picture'

@@ -1,0 +1,38 @@
+uuid: 7978e231-1975-4740-9a56-d04166238c56
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_facility
+    - paragraphs.paragraphs_type.preferred_facility
+    - taxonomy.vocabulary.facility
+  module:
+    - field_config_cardinality
+    - required_api
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 1
+  field_config_cardinality:
+    cardinality_config: '1'
+id: paragraph.preferred_facility.field_facility
+field_name: field_facility
+entity_type: paragraph
+bundle: preferred_facility
+label: Facility
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      facility: facility
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

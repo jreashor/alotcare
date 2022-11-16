@@ -1,0 +1,22 @@
+uuid: 7e69b234-cbf3-49f9-bfc1-a690165d6e7a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.facility
+id: node.facility.status
+field_name: status
+entity_type: node
+bundle: facility
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

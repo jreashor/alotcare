@@ -1,0 +1,47 @@
+uuid: c35ff22f-b4c9-4b08-b8a8-fbf6596b0112
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.facility.field_address
+    - field.field.node.facility.field_facility_term
+    - field.field.node.facility.field_phone
+    - node.type.facility
+  module:
+    - address
+    - telephone
+    - user
+id: node.facility.default
+targetEntityType: node
+bundle: facility
+mode: default
+content:
+  field_address:
+    type: address_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_facility_term:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_phone:
+    type: telephone_link
+    label: above
+    settings:
+      title: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

@@ -1,0 +1,10 @@
+uuid: 2c4e6b67-ee3f-4768-9971-cadbe2e78b71
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.facility_registration
+label: 'Facility registration'
+targetEntityType: taxonomy_term
+cache: true

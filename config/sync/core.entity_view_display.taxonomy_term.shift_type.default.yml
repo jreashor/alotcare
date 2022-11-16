@@ -1,0 +1,13 @@
+uuid: c2f90112-8d13-495a-baea-56dc2686f029
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.shift_type
+id: taxonomy_term.shift_type.default
+targetEntityType: taxonomy_term
+bundle: shift_type
+mode: default
+content: {  }
+hidden:
+  description: true

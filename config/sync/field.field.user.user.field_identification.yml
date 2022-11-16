@@ -1,0 +1,53 @@
+uuid: 81525c57-b9fe-41fa-9c4c-53c75d1a59db
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_identification
+  module:
+    - field_config_cardinality
+    - file
+    - filefield_paths
+    - required_api
+    - user
+third_party_settings:
+  filefield_paths:
+    enabled: true
+    file_path:
+      value: '[date:custom:Y]-[date:custom:m]'
+      options:
+        slashes: false
+        pathauto: false
+        transliterate: false
+    file_name:
+      value: '[file:ffp-name-only-original].[file:ffp-extension-original]'
+      options:
+        slashes: false
+        pathauto: true
+        transliterate: true
+    redirect: false
+    retroactive_update: false
+    active_updating: false
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
+  field_config_cardinality:
+    cardinality_config: '1'
+id: user.user.field_identification
+field_name: field_identification
+entity_type: user
+bundle: user
+label: Identification
+description: 'Valid driver''s license, passport, etc. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'pdf jpg jpeg'
+  max_filesize: ''
+  description_field: true
+field_type: file

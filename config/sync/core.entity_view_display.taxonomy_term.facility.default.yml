@@ -1,0 +1,38 @@
+uuid: 0bb05ef2-fc2d-495d-a835-f042f8e3c55b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.facility.field_address
+    - field.field.taxonomy_term.facility.field_phone
+    - taxonomy.vocabulary.facility
+  module:
+    - address
+    - text
+id: taxonomy_term.facility.default
+targetEntityType: taxonomy_term
+bundle: facility
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_address:
+    type: address_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_phone:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

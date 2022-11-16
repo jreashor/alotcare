@@ -1,0 +1,14 @@
+uuid: 2bcbe207-6810-4595-b10f-f11d33756103
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.facility
+  module:
+    - user
+id: user_remove_role_action.facility
+label: 'Remove the Facility role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: facility

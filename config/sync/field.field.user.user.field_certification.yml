@@ -1,0 +1,57 @@
+uuid: 6096649f-92b6-4666-a9de-432fe5792d62
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_certification
+  module:
+    - field_config_cardinality
+    - file
+    - filefield_paths
+    - required_api
+    - user
+third_party_settings:
+  filefield_paths:
+    enabled: true
+    file_path:
+      value: '[date:custom:Y]-[date:custom:m]'
+      options:
+        slashes: false
+        pathauto: false
+        transliterate: false
+    file_name:
+      value: '[file:ffp-name-only-original].[file:ffp-extension-original]'
+      options:
+        slashes: false
+        pathauto: false
+        transliterate: false
+    redirect: false
+    retroactive_update: false
+    active_updating: false
+  required_api:
+    required_plugin: required_by_role
+    required_plugin_options:
+      anonymous: 0
+      staff: 0
+      facility: 0
+      administrator: 0
+  field_config_cardinality:
+    cardinality_config: '1'
+id: user.user.field_certification
+field_name: field_certification
+entity_type: user
+bundle: user
+label: Certification
+description: 'Required for CCA, LPN, RN. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: txt
+  max_filesize: ''
+  description_field: false
+field_type: file

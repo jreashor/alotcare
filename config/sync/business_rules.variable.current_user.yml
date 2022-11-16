@@ -1,0 +1,16 @@
+uuid: bdf0f081-1c86-4ee4-95ee-36153a4ec1c4
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: cSkaP0uPcx0bJ1wwKC1jNSV7EiVGyapyOvADWm1f3M4
+id: current_user
+label: 'Current user'
+description: 'Represents the current logged user.'
+settings:
+  current_or_defined: current
+tags:
+  defaults: defaults
+type: user_variable
+target_entity_type: user
+target_bundle: user

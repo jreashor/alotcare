@@ -1,0 +1,43 @@
+uuid: e2a4f606-22ce-442e-8bb2-cbf031f4c86e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_preferred_facilities
+    - paragraphs.paragraphs_type.preferred_facility
+  module:
+    - entity_reference_revisions
+    - field_config_cardinality
+    - required_api
+    - user
+third_party_settings:
+  required_api:
+    required_plugin: required_by_role
+    required_plugin_options:
+      staff: staff
+      anonymous: 0
+      facility: 0
+      administrator: 0
+  field_config_cardinality:
+    cardinality_config: '3'
+id: user.user.field_preferred_facilities
+field_name: field_preferred_facilities
+entity_type: user
+bundle: user
+label: 'Preferred facilities'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      preferred_facility: preferred_facility
+    negate: 0
+    target_bundles_drag_drop:
+      preferred_facility:
+        weight: 2
+        enabled: true
+field_type: entity_reference_revisions

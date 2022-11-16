@@ -1,0 +1,29 @@
+uuid: 959136cb-a32a-4a4e-9e06-cdad389b145c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.preferred_facility.field_facility
+    - field.field.paragraph.preferred_facility.field_orientation_complete
+    - paragraphs.paragraphs_type.preferred_facility
+id: paragraph.preferred_facility.default
+targetEntityType: paragraph
+bundle: preferred_facility
+mode: default
+content:
+  field_facility:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_orientation_complete:
+    type: boolean_checkbox
+    weight: 1
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

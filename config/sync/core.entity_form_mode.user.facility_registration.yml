@@ -1,0 +1,10 @@
+uuid: 52df1253-7662-4700-b8a8-5c4890113851
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.facility_registration
+label: 'Facility registration'
+targetEntityType: user
+cache: true

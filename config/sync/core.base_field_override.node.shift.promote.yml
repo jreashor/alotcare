@@ -1,0 +1,22 @@
+uuid: 66b8b5de-5115-4340-b04d-7c9887eed455
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.shift
+id: node.shift.promote
+field_name: promote
+entity_type: node
+bundle: shift
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

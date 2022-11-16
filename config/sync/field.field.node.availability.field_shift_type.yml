@@ -1,0 +1,38 @@
+uuid: 2ec5a919-1b79-4264-b8c6-8468e22ac0f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_shift_type
+    - node.type.availability
+    - taxonomy.vocabulary.shift_type
+  module:
+    - field_config_cardinality
+    - required_api
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 1
+  field_config_cardinality:
+    cardinality_config: '1'
+id: node.availability.field_shift_type
+field_name: field_shift_type
+entity_type: node
+bundle: availability
+label: 'Available for'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      shift_type: shift_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

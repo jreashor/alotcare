@@ -1,0 +1,51 @@
+uuid: 7dfb7ba0-590d-4f31-b046-c8124eb0ec32
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.availability.field_date
+    - field.field.node.availability.field_shift_type
+    - node.type.availability
+  module:
+    - datetime
+id: node.availability.default
+targetEntityType: node
+bundle: availability
+mode: default
+content:
+  field_date:
+    type: datetime_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_shift_type:
+    type: options_buttons
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 3
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  path: true
+  promote: true
+  revision_log: true
+  sticky: true
+  title: true

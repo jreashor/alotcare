@@ -1,0 +1,42 @@
+uuid: 006a63ff-eb07-4dd8-a811-de720345042e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_facility
+    - taxonomy.vocabulary.facility
+  module:
+    - field_config_cardinality
+    - required_api
+    - user
+third_party_settings:
+  required_api:
+    required_plugin: required_by_role
+    required_plugin_options:
+      facility: facility
+      anonymous: 0
+      staff: 0
+      administrator: 0
+  field_config_cardinality:
+    cardinality_config: '1'
+id: user.user.field_facility
+field_name: field_facility
+entity_type: user
+bundle: user
+label: 'Facility details'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      facility: facility
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

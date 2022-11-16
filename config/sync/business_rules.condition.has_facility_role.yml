@@ -1,0 +1,15 @@
+uuid: 00906c30-998e-4b7f-a883-e822f9ebf0eb
+langcode: en
+status: true
+dependencies: {  }
+id: has_facility_role
+label: 'Has facility role'
+type: user_has_role
+description: 'The user has the facility role.'
+target_entity_type: null
+target_bundle: null
+tags: {  }
+settings:
+  roles:
+    facility: facility
+  criteria: one

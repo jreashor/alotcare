@@ -1,0 +1,267 @@
+uuid: d0427b92-7b51-40db-ad8c-69517e06bbc9
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.user.facility_edit
+    - field.field.user.user.field_address
+    - field.field.user.user.field_bio
+    - field.field.user.user.field_certification
+    - field.field.user.user.field_experience
+    - field.field.user.user.field_facility
+    - field.field.user.user.field_first_name
+    - field.field.user.user.field_identification
+    - field.field.user.user.field_last_name
+    - field.field.user.user.field_other_documents
+    - field.field.user.user.field_phone
+    - field.field.user.user.field_position
+    - field.field.user.user.field_preferred_facilities
+    - field.field.user.user.field_preferred_name
+    - field.field.user.user.field_proof_of_covid_vaccination
+    - field.field.user.user.field_sin
+    - field.field.user.user.field_vulnerable_sector_check
+    - field.field.user.user.user_picture
+    - image.style.thumbnail
+  module:
+    - address
+    - field_group
+    - file
+    - image
+    - maxlength
+    - paragraphs
+    - telephone
+    - user
+third_party_settings:
+  field_group:
+    group_preferred_facilities:
+      children:
+        - field_preferred_facilities
+      label: 'Preferred facilities'
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: true
+        description: 'Please select up three preferred facilities.'
+        required_fields: true
+    group_site_details:
+      children:
+        - account
+        - user_picture
+        - field_bio
+      label: 'Site details'
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: true
+        description: ''
+        required_fields: true
+    group_personal_details:
+      children:
+        - field_first_name
+        - field_last_name
+        - field_preferred_name
+        - field_phone
+        - field_address
+      label: 'Personal details'
+      region: content
+      parent_name: ''
+      weight: 2
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: true
+        description: ''
+        required_fields: true
+    group_employment_details:
+      children:
+        - field_sin
+        - field_position
+        - field_experience
+      label: 'Employment details'
+      region: content
+      parent_name: ''
+      weight: 3
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: true
+        description: ''
+        required_fields: true
+    group_documents:
+      children:
+        - field_identification
+        - field_vulnerable_sector_check
+        - field_proof_of_covid_vaccination
+        - field_certification
+        - field_other_documents
+      label: Documents
+      region: content
+      parent_name: ''
+      weight: 4
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: true
+        description: ''
+        required_fields: true
+_core:
+  default_config_hash: FaQ9Ptcpxpg30AtiqRDtl_8zbJArHP1LPfug_s59TOA
+id: user.user.facility_edit
+targetEntityType: user
+bundle: user
+mode: facility_edit
+content:
+  account:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  contact:
+    weight: 5
+    region: content
+  field_address:
+    type: address_default
+    weight: 14
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_bio:
+    type: string_textarea
+    weight: 5
+    region: content
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings:
+      maxlength:
+        maxlength_js: 300
+        maxlength_js_label: 'Limited to @limit characters, remaining: <strong>@remaining</strong>'
+        maxlength_js_enforce: false
+        maxlength_js_truncate_html: false
+  field_certification:
+    type: file_generic
+    weight: 9
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_experience:
+    type: options_select
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_first_name:
+    type: string_textfield
+    weight: 10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_identification:
+    type: file_generic
+    weight: 6
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_last_name:
+    type: string_textfield
+    weight: 11
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_other_documents:
+    type: file_generic
+    weight: 10
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_phone:
+    type: telephone_default
+    weight: 13
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_position:
+    type: options_select
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_preferred_facilities:
+    type: entity_reference_paragraphs
+    weight: 1
+    region: content
+    settings:
+      title: facility
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: preferred_facility
+    third_party_settings: {  }
+  field_preferred_name:
+    type: string_textfield
+    weight: 12
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_proof_of_covid_vaccination:
+    type: file_generic
+    weight: 8
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_sin:
+    type: string_textfield
+    weight: 8
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_vulnerable_sector_check:
+    type: file_generic
+    weight: 7
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  user_picture:
+    type: image_image
+    weight: 4
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+hidden:
+  field_facility: true
+  language: true
+  path: true
+  timezone: true

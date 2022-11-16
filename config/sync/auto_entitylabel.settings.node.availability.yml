@@ -1,0 +1,9 @@
+status: 1
+pattern: '[node:field_date:date:html_date] - [node:author:field_last_name], [node:author:field_first_name]'
+escape: false
+preserve_titles: false
+dependencies:
+  config:
+    - node.type.availability
+save: 0
+chunk: '50'

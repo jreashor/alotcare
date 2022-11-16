@@ -1,0 +1,20 @@
+services:
+  alotcare.normalizer.entity_reference_item:
+    class: Drupal\alotcare\Normalizer\EntityReferenceItemNormalizer
+    tags:
+      - { name: normalizer, priority: 12 }
+    arguments: ['@entity_type.repository']
+  alotcare.normalizer.field_item_list:
+    class: Drupal\alotcare\Normalizer\FieldItemListNormalizer
+    tags:
+      - { name: normalizer, priority: 11 }
+  alotcare.normalizer.field_item:
+    class: Drupal\alotcare\Normalizer\FieldItemNormalizer
+    tags:
+      - { name: normalizer, priority: 10 }
+  alotcare.staff:
+    class: Drupal\alotcare\Staff
+    arguments: ['@current_user', '@entity_type.manager']
+  alotcare.availability:
+    class: Drupal\alotcare\Availability
+    arguments: ['@current_user', '@entity_type.manager', '@alotcare.staff']

@@ -1,0 +1,52 @@
+uuid: c802bae8-5bbf-40ba-b578-bf0e00057e66
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.shift.field_applicants
+    - field.field.node.shift.field_assigned_to
+    - field.field.node.shift.field_date
+    - field.field.node.shift.field_facility
+    - field.field.node.shift.field_shift_type
+    - node.type.shift
+  module:
+    - datetime
+    - user
+id: node.shift.default
+targetEntityType: node
+bundle: shift
+mode: default
+content:
+  field_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_facility:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_shift_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  field_applicants: true
+  field_assigned_to: true

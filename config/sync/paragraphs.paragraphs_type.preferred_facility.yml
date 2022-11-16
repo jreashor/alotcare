@@ -1,0 +1,10 @@
+uuid: ff889b6a-9dfd-4759-a6ee-4548eb3c2a6f
+langcode: en
+status: true
+dependencies: {  }
+id: preferred_facility
+label: 'Preferred facility'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,29 @@
+uuid: bb7e3952-e107-4b19-8c72-33cdb2b1e05e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date
+    - node.type.availability
+  module:
+    - datetime
+    - field_config_cardinality
+    - required_api
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
+  field_config_cardinality:
+    cardinality_config: '1'
+id: node.availability.field_date
+field_name: field_date
+entity_type: node
+bundle: availability
+label: Date
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,18 @@
+uuid: 5bca6c3d-81ca-497e-bf6e-9cdc4cd6c673
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.facility
+id: node.facility.title
+field_name: title
+entity_type: node
+bundle: facility
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

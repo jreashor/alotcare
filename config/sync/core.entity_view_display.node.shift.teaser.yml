@@ -1,0 +1,30 @@
+uuid: 724c5fc1-0ce9-43e3-a60c-59e6e106d1e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.shift.field_applicants
+    - field.field.node.shift.field_assigned_to
+    - field.field.node.shift.field_date
+    - field.field.node.shift.field_facility
+    - field.field.node.shift.field_shift_type
+    - node.type.shift
+  module:
+    - user
+id: node.shift.teaser
+targetEntityType: node
+bundle: shift
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_applicants: true
+  field_assigned_to: true
+  field_date: true
+  field_facility: true
+  field_shift_type: true

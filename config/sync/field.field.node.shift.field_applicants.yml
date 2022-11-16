@@ -1,0 +1,42 @@
+uuid: 43ec2bd3-dd9a-42f6-9aea-c41103e08bb9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_applicants
+    - node.type.shift
+  module:
+    - field_config_cardinality
+    - required_api
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
+  field_config_cardinality:
+    cardinality_config: '3'
+id: node.shift.field_applicants
+field_name: field_applicants
+entity_type: node
+bundle: shift
+label: Applicants
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    filter:
+      type: role
+      role:
+        staff: staff
+        facility: '0'
+        administrator: '0'
+    include_anonymous: false
+field_type: entity_reference

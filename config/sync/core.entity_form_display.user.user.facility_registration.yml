@@ -1,0 +1,160 @@
+uuid: a69d8b83-8931-4748-b90b-327c8a123c21
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.taxonomy_term.facility_registration
+    - core.entity_form_mode.user.facility_registration
+    - field.field.user.user.field_address
+    - field.field.user.user.field_bio
+    - field.field.user.user.field_certification
+    - field.field.user.user.field_experience
+    - field.field.user.user.field_facility
+    - field.field.user.user.field_first_name
+    - field.field.user.user.field_identification
+    - field.field.user.user.field_last_name
+    - field.field.user.user.field_other_documents
+    - field.field.user.user.field_phone
+    - field.field.user.user.field_position
+    - field.field.user.user.field_preferred_facilities
+    - field.field.user.user.field_preferred_name
+    - field.field.user.user.field_proof_of_covid_vaccination
+    - field.field.user.user.field_sin
+    - field.field.user.user.field_vulnerable_sector_check
+    - field.field.user.user.user_picture
+  module:
+    - field_group
+    - inline_entity_form
+    - user
+third_party_settings:
+  field_group:
+    group_preferred_facilities:
+      children:
+        - field_facility_1
+        - field_facility_1_orientated
+        - field_facility_2
+        - field_facility_2_orientated
+        - field_facility_3
+        - field_facility_3_orientated
+      label: 'Preferred facilities'
+      region: hidden
+      parent_name: ''
+      weight: 11
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: true
+        description: 'Please select up three preferred facilities.'
+        required_fields: true
+    group_personal_details:
+      children:
+        - field_first_name
+        - field_last_name
+      label: 'Personal details'
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: true
+        description: ''
+        required_fields: true
+    group_employment_details:
+      children:
+        - field_experience
+        - field_position
+        - field_sin
+      label: 'Employment details'
+      region: hidden
+      parent_name: ''
+      weight: 12
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: true
+        description: ''
+        required_fields: true
+    group_user_details:
+      children:
+        - account
+      label: 'User details'
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: true
+        description: ''
+        required_fields: true
+_core:
+  default_config_hash: FaQ9Ptcpxpg30AtiqRDtl_8zbJArHP1LPfug_s59TOA
+id: user.user.facility_registration
+targetEntityType: user
+bundle: user
+mode: facility_registration
+content:
+  account:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  contact:
+    weight: 5
+    region: content
+  field_facility:
+    type: inline_entity_form_simple
+    weight: 2
+    region: content
+    settings:
+      form_mode: facility_registration
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      collapsible: false
+      collapsed: false
+      revision: false
+    third_party_settings: {  }
+  field_first_name:
+    type: string_textfield
+    weight: 10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_last_name:
+    type: string_textfield
+    weight: 11
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  field_address: true
+  field_bio: true
+  field_certification: true
+  field_experience: true
+  field_identification: true
+  field_other_documents: true
+  field_phone: true
+  field_position: true
+  field_preferred_facilities: true
+  field_preferred_name: true
+  field_proof_of_covid_vaccination: true
+  field_sin: true
+  field_vulnerable_sector_check: true
+  language: true
+  path: true
+  timezone: true
+  user_picture: true

@@ -1,0 +1,34 @@
+alotcare.calendar_shifts:
+  path: '/shifts'
+  defaults:
+    _title: 'Shifts'
+    _controller: '\Drupal\alotcare\Controller\CalendarController::shifts'
+  requirements:
+    _user_is_logged_in: 'TRUE'
+
+alotcare.calendar_availability:
+  path: '/availability'
+  defaults:
+    _title: 'Availability'
+    _controller: '\Drupal\alotcare\Controller\CalendarController::availability'
+  requirements:
+    _user_is_logged_in: 'TRUE'
+
+alotcare.api_availability:
+  path: '/api/availability/{date}'
+  methods: [GET]
+  defaults:
+    _controller: '\Drupal\alotcare\Controller\ApiAvailabilityController::get'
+    date: NULL
+  requirements:
+    _format: json
+    _user_is_logged_in: 'TRUE'
+
+alotcare.message_user:
+  path: '/api/message'
+  methods: [POST]
+  defaults:
+    _controller: '\Drupal\alotcare\Controller\ApiMessageUserController::send'
+  requirements:
+    _format: json
+#s

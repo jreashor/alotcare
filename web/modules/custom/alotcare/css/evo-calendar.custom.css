@@ -1,0 +1,28 @@
+/* morning */
+button.shift-type-event {
+  background-color: #ff7575;
+  border-color: #ff7575;
+}
+/* evening */
+button.shift-type-holiday {
+  background-color: #ffc107;
+  border-color: #ffc107;
+}
+/* night */
+button.shift-type-birthday {
+  background-color: #3ca8ff;
+  border-color: #3ca8ff;
+}
+
+.event-container>.event-icon::before {
+  height: calc(100% + 14px);
+}
+
+@media screen and (max-width: 768px) {
+  #eventListToggler {
+    right: 0;
+    -webkit-transform: unset;
+    -ms-transform: unset;
+    transform: unset;
+  }
+}

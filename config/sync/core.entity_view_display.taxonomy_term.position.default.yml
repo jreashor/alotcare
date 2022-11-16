@@ -1,0 +1,15 @@
+uuid: ad4184a3-d3fa-4a79-9fca-f01557c23c73
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.position.field_hourly_wage
+    - taxonomy.vocabulary.position
+id: taxonomy_term.position.default
+targetEntityType: taxonomy_term
+bundle: position
+mode: default
+content: {  }
+hidden:
+  description: true
+  field_hourly_wage: true

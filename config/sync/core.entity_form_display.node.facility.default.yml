@@ -1,0 +1,77 @@
+uuid: 45b36d82-e711-4ada-94ff-751d063d7faa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.facility.field_address
+    - field.field.node.facility.field_facility_term
+    - field.field.node.facility.field_phone
+    - node.type.facility
+  module:
+    - address
+    - path
+    - telephone
+id: node.facility.default
+targetEntityType: node
+bundle: facility
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_address:
+    type: address_default
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_facility_term:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_phone:
+    type: telephone_default
+    weight: 6
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 5
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  promote: true
+  sticky: true

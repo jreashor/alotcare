@@ -1,0 +1,35 @@
+uuid: 6b5cc9c9-1677-4598-9495-7119bcb2b00f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_shift_type
+    - node.type.shift
+    - taxonomy.vocabulary.shift_type
+  module:
+    - required_api
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 1
+id: node.shift.field_shift_type
+field_name: field_shift_type
+entity_type: node
+bundle: shift
+label: Type
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      shift_type: shift_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

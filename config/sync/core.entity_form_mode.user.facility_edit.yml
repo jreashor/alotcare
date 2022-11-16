@@ -1,0 +1,10 @@
+uuid: d5d6f276-2b8f-4b59-9c0b-c0884bba27cf
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.facility_edit
+label: 'Facility edit'
+targetEntityType: user
+cache: true

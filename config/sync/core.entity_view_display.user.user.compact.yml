@@ -1,0 +1,61 @@
+uuid: 65ffd11c-3459-42d7-8f30-1b55a15e6a6c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.user.compact
+    - field.field.user.user.field_address
+    - field.field.user.user.field_bio
+    - field.field.user.user.field_certification
+    - field.field.user.user.field_experience
+    - field.field.user.user.field_facility
+    - field.field.user.user.field_first_name
+    - field.field.user.user.field_identification
+    - field.field.user.user.field_last_name
+    - field.field.user.user.field_other_documents
+    - field.field.user.user.field_phone
+    - field.field.user.user.field_position
+    - field.field.user.user.field_preferred_facilities
+    - field.field.user.user.field_preferred_name
+    - field.field.user.user.field_proof_of_covid_vaccination
+    - field.field.user.user.field_sin
+    - field.field.user.user.field_vulnerable_sector_check
+    - field.field.user.user.user_picture
+    - image.style.thumbnail
+  module:
+    - image
+    - user
+_core:
+  default_config_hash: kD2TjItfNDKFw2CFJQfuv4Ys6qg3uYa4hCJYN2jreec
+id: user.user.compact
+targetEntityType: user
+bundle: user
+mode: compact
+content:
+  user_picture:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: thumbnail
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_address: true
+  field_bio: true
+  field_certification: true
+  field_experience: true
+  field_facility: true
+  field_first_name: true
+  field_identification: true
+  field_last_name: true
+  field_other_documents: true
+  field_phone: true
+  field_position: true
+  field_preferred_facilities: true
+  field_preferred_name: true
+  field_proof_of_covid_vaccination: true
+  field_sin: true
+  field_vulnerable_sector_check: true
+  member_for: true

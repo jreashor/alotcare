@@ -1,0 +1,8 @@
+uuid: 67ed069c-a142-414d-9903-f87077ecbe56
+langcode: en
+status: true
+dependencies: {  }
+name: 'Shift type'
+vid: shift_type
+description: 'Machine names are setup to match Evo Calendar types.'
+weight: 0

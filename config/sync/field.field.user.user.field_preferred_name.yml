@@ -1,0 +1,28 @@
+uuid: be37040c-e44f-4c42-aac9-c0fd44cdaf79
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_preferred_name
+  module:
+    - field_config_cardinality
+    - required_api
+    - user
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
+  field_config_cardinality:
+    cardinality_config: '1'
+id: user.user.field_preferred_name
+field_name: field_preferred_name
+entity_type: user
+bundle: user
+label: 'Preferred name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
